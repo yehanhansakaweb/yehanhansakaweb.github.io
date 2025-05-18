@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://yehanhansakaofficial.github.io/</loc>
+    <lastmod>2025-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <!-- Add more URLs if your site has more pages -->
+  <!-- Example:
+  <url>
+    <loc>https://yehanhansakaofficial.github.io/projects</loc>
+    <lastmod>2025-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  -->
+</urlset>
