@@ -577,6 +577,68 @@ img {
 <meta name="google-site-verification" content="Fw-MQq8x17wurW0uGlZT2LGk4A5y5nLlJzMfzq3PHXQ" />
     </head>
     <body>
+<!-- Loader START -->
+<div id="loader" style="
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+">
+  <img src="loader.png" alt="Loading..." style="
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    animation: fadeInOut 2s ease-in-out infinite;
+  ">
+  <div style="width: 200px; height: 6px; margin-top: 30px; background: #ddd; border-radius: 4px; overflow: hidden;">
+    <div id="progress-bar" style="
+      height: 100%;
+      width: 0%;
+      background: #3498db;
+      transition: width 10s linear;
+    "></div>
+  </div>
+</div>
+
+<style>
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+</style>
+
+<script>
+window.addEventListener('DOMContentLoaded', () => {
+  const progress = document.getElementById('progress-bar');
+  const loader = document.getElementById('loader');
+
+  // Start loading animation
+  progress.style.width = '100%';
+
+  // After 4s, fade out loader
+  setTimeout(() => {
+    loader.classList.add('fade-out');
+
+    const style = document.createElement('style');
+    style.innerHTML = `
+      #loader.fade-out {
+        opacity: 0 !important;
+        visibility: hidden !important;
+      }
+    `;
+    document.head.appendChild(style);
+  }, 10000);
+});
+</script>
         <!--===== HEADER =====-->
         <header class="l-header">
             <nav class="nav bd-grid">
