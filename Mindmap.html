@@ -715,7 +715,122 @@ window.addEventListener('DOMContentLoaded', () => {
                     </svg>
                 </div>
             </section>
+<!-- WhatsApp Registration Button & Popup -->
+<style>
+  #openPopupBtn {
+    padding: 15px 30px;
+    margin: 20px 65px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(145deg, #0070FF, #8900FF);
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 0 15px #0001FF;
+    transition: 0.3s;
+  }
 
+  #popupForm {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #1e2a38;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0,255,100,0.4);
+    z-index: 9999;
+    width: 90%;
+    max-width: 400px;
+    color: white;
+  }
+
+  #popupForm h2 {
+    margin-top: 0;
+    text-align: center;
+  }
+
+  #popupForm input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+  }
+
+  #sendBtn {
+    display: none;
+    background: linear-gradient(to right, #00c9ff, #92fe9d);
+    color: #000;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    transition: 0.3s;
+  }
+
+  #closePopup {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 22px;
+    cursor: pointer;
+    color: #ccc;
+  }
+
+  #closePopup:hover {
+    color: white;
+  }
+</style>
+
+<button id="openPopupBtn">Enroll (If you're a association member)</button>
+
+<div id="popupForm">
+  <span id="closePopup">&times;</span>
+  <input type="text" id="userName" placeholder="Your Name" />
+  <input type="text" id="userAssociation" placeholder="Your Association" />
+  <button id="sendBtn">Send to WhatsApp</button>
+</div>
+
+<script>
+  const openPopupBtn = document.getElementById('openPopupBtn');
+  const popupForm = document.getElementById('popupForm');
+  const closePopup = document.getElementById('closePopup');
+  const userName = document.getElementById('userName');
+  const userAssociation = document.getElementById('userAssociation');
+  const sendBtn = document.getElementById('sendBtn');
+
+  openPopupBtn.addEventListener('click', () => {
+    popupForm.style.display = 'block';
+  });
+
+  closePopup.addEventListener('click', () => {
+    popupForm.style.display = 'none';
+  });
+
+  function validateInputs() {
+    if (userName.value.trim() && userAssociation.value.trim()) {
+      sendBtn.style.display = 'block';
+    } else {
+      sendBtn.style.display = 'none';
+    }
+  }
+
+  userName.addEventListener('input', validateInputs);
+  userAssociation.addEventListener('input', validateInputs);
+
+  sendBtn.addEventListener('click', () => {
+    const name = encodeURIComponent(userName.value.trim());
+    const association = encodeURIComponent(userAssociation.value.trim());
+    const message = `Hello, I'm ${name} from ${association}. I want to do your course, Mindmaps with Markdown.`;
+    const whatsappNumber = '94705399256'; // Replace with your number
+    window.open(`https://wa.me/${whatsappNumber}?text=${message}`, '_blank');
+  });
+</script>
             <!--===== ABOUT =====-->
             <div class="container">
      <h2 class="section-title">Course Content</h2>
