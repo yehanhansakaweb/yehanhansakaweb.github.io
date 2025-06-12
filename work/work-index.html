@@ -1,0 +1,24 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Yehan Hansaka | Portfolio</title><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" /><style> * { margin: 0; padding: 0; box-sizing: border-box; }   body { font-family: 'Segoe UI', sans-serif; background: #f4f4f4; color: #333; line-height: 1.6; }   header { background: #1f2937; color: #fff; padding: 3rem 1rem; text-align: center; }    header h1 { font-size: 2.8rem; margin-bottom: 0.5rem; }   header p { font-size: 1.2rem; color: #ccc; }    nav {     background: #fff;      display: flex;      justify-content: center;      gap: 1.5rem;      padding: 1rem;     box-shadow: 0 2px 10px rgba(0,0,0,0.05);      position: sticky;     top: 0;     z-index: 999;   }  nav a {     text-decoration: none;      color: #333;     font-weight: 600;      transition: color 0.3s;    }  nav a:hover {      color: #0072ff;    }    .toolbar {     background: #fff;     padding: 1.2rem;      display: flex;      justify-content: center;    }    .toolbar input {      padding: 12px 20px;      font-size: 1rem;      width: 90%;      max-width: 400px;     border: 1px solid #ccc;     border-radius: 30px;      outline: none;    }    .section {     padding: 2rem 1rem;      max-width: 1200px;      margin: auto;   }    .portfolio {      display: grid;    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));      gap: 1.5rem;    }    .card {      background: #fff;     border-radius: 15px;    box-shadow: 0 8px 20px rgba(0,0,0,0.08);      overflow: hidden;    }    .card-top {     background: linear-gradient(to right, #00c6ff, #0072ff);      text-align: center;    padding: 2rem 1rem;      border-bottom-left-radius: 100% 20%;      border-bottom-right-radius: 100% 20%;   }    .card-top i {      font-size: 3rem;     color: #fff;    }    .card-body {      padding: 1.5rem;      text-align: center;    }    .card-body h3 {      margin: 0.5rem 0;     font-size: 1.2rem;    }    .card-body p {      font-size: 0.95rem;      color: #666;   }    .card-body button {      margin-top: 1rem;     background: linear-gradient(to right, #00c6ff, #0072ff);      color: #fff;      padding: 10px 20px;      border: none;      border-radius: 25px;    cursor: pointer;      font-weight: bold;    }    #about, #contact {      text-align: center;    }    #about p, #contact p {      max-width: 700px;      margin: auto;      color: #555;    }   footer {      background: #1f2937;      color: #bbb;      text-align: center;      padding: 1rem;      margin-top: 2rem;    }   @media (max-width: 500px) {      header h1 { font-size: 2rem; }    .card-body h3 { font-size: 1rem; } }</style></head><body><header><h1>Yehan Hansaka</h1><p>Student • Developer • Tool Creator</p></header><div class="toolbar"><input type="text" id="searchInput" placeholder="Search tools..." oninput="filterCards()" /></div><section class="section" id="tools"><div class="portfolio" id="portfolio">
+   
+
+
+
+
+
+
+
+<div class="card" data-title="number system base converter"><div class="card-top"></div><div class="card-body"><h3>Number System Base Converter</h3><p>Convert Any Value to Any Number System Base.</p><a href="Num_Sys_Calculator V2.html"><button>TRY IT !</button></a></div></div>
+
+<div class="card" data-title="base64 encoder and decoder"><div class="card-top"></div><div class="card-body"><h3>Encode or Decode Base64 Data</h3><p>Encode Or Decode Base64 data very Easily</p><a href="base64.html"><button>TRY IT !</button></a></div></div>
+
+<div class="card" data-title="mindmaps with markdown"><div class="card-top"></div><div class="card-body"><h3>Mindmaps with Markdown </h3><p>Learn to make Mindmaps with Markdown Using Markmap API</p><a href="Mindmap.html"><button>TRY IT !</button></a></div></div>
+
+
+
+
+
+
+
+
+
+</section><footer><section class="section" id="about"><h2>About Me</h2><p>I'm Yehan Hansaka, a passionate student and developer from Sri Lanka. I build useful educational tools and full-stack web apps that solve real problems. I love clean code, useful design, and tech that empowers others.</p></section><section class="section" id="contact"><h2>Contact</h2><p>Email: <strong>yehanhansakaofficial@email.com</strong></p></section>Made with ❤️ by Yehan Hansaka — © 2025</footer><script>function openTool(url) {window.open(url, "_blank");}function filterCards() {const query = document.getElementById("searchInput").value.toLowerCase();const cards = document.querySelectorAll(".card");cards.forEach(card => {const title = card.getAttribute("data-title");card.style.display = title.includes(query) ? "block" : "none";});}</script></body></html>
