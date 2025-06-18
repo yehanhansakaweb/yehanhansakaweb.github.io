@@ -4,8 +4,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-        <style>
-                /*===== GOOGLE FONTS =====*/
+       <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+ <style>
+        	/*===== GOOGLE FONTS =====*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 /*===== VARIABLES CSS =====*/
 :root {
@@ -54,7 +55,7 @@ body {
   margin: var(--header-height) 0 0 0;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
-  color: var(--second-color);
+  background-color: #1A00C0;
 }
 
 h1, h2, p {
@@ -509,7 +510,7 @@ img {
   25%, 75% { opacity: 0; }
 }
 }
-                </style>
+		</style>
   <style>
     body {
       margin: 0;
@@ -585,6 +586,118 @@ img {
     .about p {
       line-height: 1.6;
     }
+    
+.number-system-section {
+  background-color: #f9fbfe;
+  color: #1a2a5c;
+  width: 100%;
+  margin: 2rem auto;
+  padding: 2rem 2.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 85, 255, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.7;
+}
+
+.number-system-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #0055ff;
+  margin-bottom: 1rem;
+}
+
+.number-system-section h3 {
+  margin-top: 1.5rem;
+  color: #0033aa;
+}
+
+.number-system-section h4 {
+  margin-top: 1rem;
+  font-weight: 600;
+  color: #0044cc;
+}
+
+.number-system-section ul {
+  padding-left: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.number-system-section li {
+  margin-bottom: 0.5rem;
+}
+
+.number-system-section code {
+  background: #e6f0ff;
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+  font-family: monospace;
+  color: #002288;
+  display: inline-block;
+  margin-top: 0.3rem;
+}
+
+@media (max-width: 600px) {
+  .number-system-section {
+    padding: 1.2rem;
+  }
+}
+
+.intro-header {
+  background: linear-gradient(120deg, #e6f0ff, #ffffff);
+  color: #002244;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 85, 255, 0.15);
+  margin: 2rem auto;
+  max-width: 900px;
+  animation: slideIn 1s ease-in-out;
+}
+
+.intro-header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #0055ff;
+}
+
+.intro-header p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #003377;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.portfolio-button {
+  background-color: transparent;
+  color: #0055ff;
+  border: 2px solid #0055ff;
+  padding: 1rem 1.4rem;
+  width:60%;
+  border-radius: 30px;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: 0.3s ease;
+  margin: 0.8rem;
+  display: inline-block;
+}
+
+.portfolio-button:hover {
+  background-color: #0055ff;
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 6px 14px rgba(0, 85, 255, 0.2);
+}
   </style>
         <!-- =====BOX ICONS===== -->
         <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
@@ -594,14 +707,12 @@ img {
     <body>
       <script async="async" data-cfasync="false" src="//pl26673426.profitableratecpm.com/3705aafc41ddf422b13521370f915323/invoke.js"></script>
 <div id="container-3705aafc41ddf422b13521370f915323"></div>
-            <section class="home bd-grid" id="home">
-                <div class="home__data">
-                    <h1 class="home__title"><p>Hi, Welcome To Number Systems Converter, <span class="home__title-color">You Can convert Using This,
-</span><div class="typing-container">•
-  <span id="typing"></span><span class="cursor">|</span>
-</div></p></h1>
-                </div>
 
+<header class="intro-header">
+  <h1>Welcome to the Number System Converter</h1>
+  <p>Convert between Binary, Octal, Decimal, and Hexadecimal — Fast, Easy, Accurate.</p>
+  <a href="https://yehanhansakaweb.github.io/" target="_blank" class="portfolio-button">Visit Who Am I </a>
+</header>
                <div class="converter">
     <input type="text" id="input" placeholder="Enter a value to convert" />
 
@@ -622,8 +733,187 @@ img {
 
     <div class="output" id="output"></div>
   </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+<div class="number-system-section">
+  <h2>Understanding Number Systems</h2>
 
-        <!--===== SCROLL REVEAL =====-->
+  <p>
+    A <strong>Number System</strong> is a structured way to represent numbers using digits or symbols. We commonly use systems like Binary, Decimal, Octal, and Hexadecimal, especially in computing and electronics.
+  </p>
+</div>
+
+
+
+
+<div class="number-system-section">
+  <h3>Types of Number Systems</h3>
+  <ul>
+    <li><strong>Binary (Base 2):</strong> Digits 0 and 1 only — the language of computers.</li>
+    <li><strong>Decimal (Base 10):</strong> Digits 0–9 — the number system we use every day.</li>
+    <li><strong>Octal (Base 8):</strong> Digits 0–7 — used in digital systems as a shortcut for binary.</li>
+    <li><strong>Hexadecimal (Base 16):</strong> Digits 0–9 and A–F — compact binary representation.</li>
+  </ul>
+</div>
+
+
+
+
+<div class="number-system-section">
+  <h3>Why We Use Different Systems</h3>
+  <p>
+    Computers process everything in binary. Hex and octal make binary shorter and easier to read. Decimal is used for human interaction. Understanding these systems helps bridge human-computer communication.
+  </p>
+</div>
+
+
+
+
+  <h3>Conversions Between Systems</h3>
+
+
+<div class="number-system-section">
+  <h4>Binary ➝ Decimal</h4>
+  <p>Multiply each binary digit by 2ⁿ from right to left, then add.</p>
+  <p><code>1011 → (1×8) + (0×4) + (1×2) + (1×1) = 11</code></p>
+</div>
+
+<div class="number-system-section">
+  <h4>Decimal ➝ Binary</h4>
+  <p>Divide by 2 repeatedly, record remainders, then reverse them.</p>
+  <p><code>11 → 1011</code></p>
+</div>
+
+
+<div class="number-system-section">
+  <h4>Decimal ➝ Octal</h4>
+  <p>Divide by 8, record remainders, and reverse them.</p>
+  <p><code>83 → 123</code></p>
+</div>
+
+
+<div class="number-system-section">
+  <h4>Octal ➝ Decimal</h4>
+  <p>Multiply each digit by 8ⁿ from right to left, then add.</p>
+  <p><code>123 → 83</code></p>
+</div>
+
+
+<div class="number-system-section">
+  <h4>Decimal ➝ Hexadecimal</h4>
+  <p>Divide by 16, record remainders, then convert to letters A–F.</p>
+  <p><code>254 → FE</code></p>
+</div>
+
+
+<div class="number-system-section">
+  <h4>Hexadecimal ➝ Decimal</h4>
+  <p>Convert A–F to 10–15, multiply by 16ⁿ, then add.</p>
+  <p><code>FE → 254</code></p>
+</div>
+
+
+<div class="number-system-section">
+  <h4>Binary ➝ Hexadecimal</h4>
+  <p>Group into 4 bits and convert each group to a hex digit.</p>
+  <p><code>11011111 → DF</code></p>
+</div>
+
+
+<div class="number-system-section">
+  <h4>Hexadecimal ➝ Binary</h4>
+  <p>Convert each hex digit to 4-bit binary.</p>
+  <p><code>DF → 11011111</code></p>
+
+</div>
+
+
+<div class="number-system-section">
+  <h4>Binary ➝ Octal</h4>
+  <p>Group into 3 bits and convert to octal digits.</p>
+  <p><code>110011 → 63</code></p>
+</div>
+
+
+
+<div class="number-system-section">
+  <h4>Octal ➝ Binary</h4>
+  <p>Convert each digit to a 3-bit binary group.</p>
+  <p><code>63 → 110011</code></p>
+</div>
+
+
+<div class="number-system-section">
+  <h3>Conclusion</h3>
+  <p>
+    Number systems are foundational in computing. With the ability to convert between them, we better understand how computers process, store, and represent data efficiently.
+  </p>
+  
+  
+</div>
+
+<footer style="background:linear-gradient(135deg, #001f3f, #0074D9); border-raduis:30%;color:white; padding:40px 20px; font-family:sans-serif; width:100%;">
+  <div style="width:100%; margiin:auto; display:flex; flex-wrap:wrap;; justify-content:space-between;">
+    
+    <!-- About Section -->
+    <div style="flex:1 1 200px; margin:20px;">
+      <h2 style="font-size:24px; margin-bottom:15px;">About Me</h2>
+      <h3 style="font-size:24px; margin-bottom:15px;">I'm Yehan Hansaka</h3>
+      <p style="line-height:1.6;">I provide tools and resources for students, developers, and creatives. Step into the future with our web tools & courses platform.</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div style="flex:1 1 150px; margin:20px;">
+      <h2 style="font-size:24px; margin-bottom:15px;">Quick Links</h2>
+      <ul style="list-style:none; padding:0;">
+        <li><a href="https://yehanhansakaweb.github.io/" style="color:white; text-decoration:none; display:block; margin-bottom:10px;">Home</a></li>
+        <li><a href="https://yehanhansakaweb.github.io/work/work-index.html" style="color:white; text-decoration:none; display:block; margin-bottom:10px;">Works</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div style="flex:1 1 200px; margin:20px;">
+      <h2 style="font-size:24px; margin-bottom:15px;">Contact</h2>
+      <p style="margin-bottom:10px;">📧 yehanhansakaofficial@gmail.com</p>
+      <p>📍 Rathnapura, Sabaragamuwa Province, Sri Lanka</p>
+    </div>
+
+    <!-- Comment to WhatsApp -->
+    <div style="flex:1 1 250px; margin:20px;">
+      <h2 style="font-size:24px; margin-bottom:15px;">Send a Comment</h2>
+      <textarea id="commentBox" placeholder="Type your comment..." style="width:100%; padding:10px; border:none; border-radius:10px; resize:none; font-size:16px;"></textarea>
+      <button onclick="sendToWhatsApp()" style="margin-top:10px; background-color:#00BFA5; border:none; color:white; padding:10px 20px; font-size:16px; border-radius:10px; cursor:pointer;">Send via WhatsApp</button>
+    </div>
+  </div>
+
+  <!-- Bottom -->
+  <div style="text-align:center; border-top:1px solid rgba(255,255,255,0.2); padding-top:20px; margin-top:40px; font-size:14px;">
+    © 2025 Yehan Hansaka. All rights reserved.
+  </div>
+</footer>
+
+<script>
+function sendToWhatsApp() {
+  var msg = document.getElementById("commentBox").value.trim();
+  if (msg === "") {
+    alert("Please type a comment before sending.");
+    return;
+  }
+  var phone = "94705399256"; // Replace with your WhatsApp number (without + or leading 0)
+  var url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(msg);
+  window.open(url, "_blank");
+}
+</script>
+    <!--===== SCROLL REVEAL =====-->
         <script src="https://unpkg.com/scrollreveal"></script>
           <script>
     const input = document.getElementById('input');
@@ -741,7 +1031,7 @@ img {
 </script>
         <!--===== MAIN JS =====-->
         <script>
-                /*===== MENU SHOW =====*/ 
+        	/*===== MENU SHOW =====*/ 
 const showMenu = (toggleId, navId) =>{
     const toggle = document.getElementById(toggleId),
     nav = document.getElementById(navId)
@@ -775,7 +1065,7 @@ const scrollActive = () =>{
               sectionTop = current.offsetTop - 58,
               sectionId = current.getAttribute('id'),
               sectionsClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']')
-
+        
         if(scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight){
             sectionsClass.classList.add('active-link')
         }else{
