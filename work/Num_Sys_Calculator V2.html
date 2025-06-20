@@ -549,7 +549,7 @@ img {
       font-size: 1rem;
     }
 
-    input, select {
+    .input, select {
       width: 100%;
       padding: 1rem;
       border-radius: 50px;
@@ -709,7 +709,7 @@ img {
     </head>
     <body>
       <script async="async" data-cfasync="false" src="//pl26673426.profitableratecpm.com/3705aafc41ddf422b13521370f915323/invoke.js"></script>
-<div id="container-3705aafc41ddf422b13521370f915323"></div>
+<div id="conta0f915323"></div>
 
 <header class="intro-header">
   <h1>Welcome to the Number System Converter</h1>
@@ -718,7 +718,7 @@ img {
   <a href="#footer" target="_blank" class="portfolio-button">Comment Anything </a>
 </header>
                <div class="converter">
-    <input type="text" id="input" placeholder="Enter a value to convert" />
+    <textarea class="input" id="input" placeholder="Enter a value to convert"></textarea>
 
     <select id="from">
       <option value="binary">From Binary</option>
@@ -959,29 +959,46 @@ function sendToWhatsApp() {
     }
 
     function convert() {
-      const val = input.value.trim();
-      const fromType = from.value;
-      const toType = to.value;
+  const val = input.value.trim().toUpperCase();
+  const fromType = from.value;
+  const toType = to.value;
 
-      try {
-        let results = [];
+  const validChars = /^[0-9A-F\s]+$/;
 
-        if (fromType === 'text') {
-          for (let ch of val) {
-            let dec = toDecimal(ch, fromType);
-            results.push(fromDecimal(dec, toType));
-          }
-          output.innerHTML = `<p><strong>${toType.toUpperCase()}:</strong> ${results.join(' ')}</p>`;
-        } else {
-          let decimal = toDecimal(val, fromType);
-          if (isNaN(decimal)) throw 'Invalid input';
-          let result = fromDecimal(decimal, toType);
-          output.innerHTML = `<p><strong>${toType.toUpperCase()}:</strong> ${result}</p>`;
-        }
-      } catch (e) {
-        output.innerHTML = `<p style="color: red;">Error: ${e}</p>`;
-      }
+  // Skip text type because it allows all characters
+  if (fromType !== 'text') {
+    // Extract invalid characters
+    const invalidChars = [...val].filter(ch => !/[0-9A-F\s]/.test(ch));
+    if (invalidChars.length > 0) {
+      output.innerHTML = `<p class="input" style="color: red;">Error: Invalid character(s) used: <strong>${[...new Set(invalidChars)].join(', ')}</strong></p>`;
+      return;
     }
+
+    if (!validChars.test(val)) {
+      output.innerHTML = `<p class="input" style="color: red;">Error: Only 0-9 and A-F are allowed</p>`;
+      return;
+    }
+  }
+
+  try {
+    let results = [];
+
+    if (fromType === 'text') {
+      for (let ch of val) {
+        let dec = toDecimal(ch, fromType);
+        results.push(fromDecimal(dec, toType));
+      }
+      output.innerHTML = `<p class="input"><strong>${toType.toUpperCase()}:</strong> ${results.join(' ')}</p>`;
+    } else {
+      let decimal = toDecimal(val, fromType);
+      if (isNaN(decimal)) throw 'Invalid input';
+      let result = fromDecimal(decimal, toType);
+      output.innerHTML = `<p class="input"><strong>${toType.toUpperCase()}:</strong> ${result}</p>`;
+    }
+  } catch (e) {
+    output.innerHTML = `<p style="color: red;">Error: ${e}</p>`;
+  }
+}
 
     input.addEventListener('input', convert);
     from.addEventListener('change', convert);
