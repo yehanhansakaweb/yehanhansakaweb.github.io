@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
         <style>
-        	/*===== GOOGLE FONTS =====*/
+                /*===== GOOGLE FONTS =====*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 /*===== VARIABLES CSS =====*/
 :root {
@@ -509,7 +509,7 @@ img {
   25%, 75% { opacity: 0; }
 }
 }
-		</style>
+                </style>
 
         <!-- =====BOX ICONS===== -->
         <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
@@ -624,38 +624,41 @@ header img {
         <title>Mindmap With Markdown | Course</title>
     </head>
     <body>
-  
+
         <!--===== HEADER =====-->
        <div class="progress-bar" id="progressBar"></div>
 
         <main class="l-main">
             <!--===== HOME =====-->
-            <section class="home bd-grid" id="home">
-                <div class="home__data">
-                    <h1 class="home__title"><p>Hi, Welcome to my <span class="home__title-color">Mindmaps With Markdown Course. </span> In This Course, You can learn about all of the concepts of markdown and hiw to make a mindmap using markmap API succesfully.</h1>
-                </div>
-
-               <div class="home__social">
-                    <a href="https://youtube.com/@yehan_hansaka?si=4wn-kMQa47zVeBPM" class="home__social-icon"><i class='bx bxl-youtube'></i></a>
-                    <a href="https://whatsapp.com/channel/0029VaKtpaaC1FuAcA8epl2s." class="home__social-icon"><i class='bx bxl-whatsapp' ></i></a>
-                    <a href="https://github.com/YehanHansakaOfficial" class="home__social-icon"><i class='bx bxl-github' ></i></a>
-                </div>
-
-                <div class="home__img">
-                    <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <mask id="mask0" mask-type="alpha">
-                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
-                        </mask>
-                        <g mask="url(#mask0)">
-                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
-                            <image class="home__blob-img" x="50" y="60" href="perfil.png"/>
-                        </g>
-                    </svg>
-                </div>
-            </section>
+            <div style="
+  background: linear-gradient(135deg, #0f172a, #1e293b); 
+  color: white; 
+  padding: 40px 20px; 
+  border-bottom-left-radius: 30px; 
+  border-bottom-right-radius: 30px; 
+  text-align: center; 
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+">
+  <h1 style="margin: 0; font-size: 2em; font-weight: 700;">
+    🎓 Learn with Yehan
+  </h1>
+  <p style="margin: 10px; margin-top: 20px;font-size: 1em; color: #cbd5e1;">
+    Mindmaps With Markdown Using Markmap API
+  </p>
+  <a href="https://yehanhansakaweb.github.io/"><button id="openPopup" style="background-color: #22d3ee;   color: #0f172a; padding: 10px 25px;    border-radius: 25px;   font-weight: 600;   font-size: 1em;border: none; cursor: pointer; transition: all 0.3s ease; " onmouseover="this.style.backgroundColor='#0ea5e9'; this.style.color='#ffffff'" onmouseout="this.style.backgroundColor='#22d3ee'; this.style.color='#0f172a'">
+      Visit Who am I
+    </button></a>
+  <div style="margin-top: 20px;">
+    
+        <button id="openPopupBtn" style="background-color: #22d3ee;   color: #0f172a; padding: 10px 25px;    border-radius: 25px;   font-weight: 600;   font-size: 1em;border: none; cursor: pointer; transition: all 0.3s ease; " onmouseover="this.style.backgroundColor='#0ea5e9'; this.style.color='#ffffff'" onmouseout="this.style.backgroundColor='#22d3ee'; this.style.color='#0f172a'">
+      Enroll if you're a association member
+    </button>
+  </div>
+</div>
 <!-- WhatsApp Registration Button & Popup -->
 <style>
-  #openPopupBtn {
+  #openPopuBtn {
     padding: 15px 30px;
     margin: 20px 65px;
     font-size: 18px;
@@ -725,7 +728,7 @@ header img {
   }
 </style>
 
-<button id="openPopupBtn">Enroll (If you're a association member)</button>
+
 
 <div id="popupForm">
   <span id="closePopup">&times;</span>
@@ -858,12 +861,12 @@ _________________________________________________
         <footer class="footer">
             <p class="footer__title">Yehan Hansaka</p>
             <div class="footer__social">
-            	<a href="https://youtube.com/@yehan_hansaka?si=4wn-kMQa47zVeBPM" class="footer__icon"><i class='bx bxl-youtube'></i></a>
+                    <a href="https://youtube.com/@yehan_hansaka?si=4wn-kMQa47zVeBPM" class="footer__icon"><i class='bx bxl-youtube'></i></a>
                 <a href="https://whatsapp.com/channel/0029VaKtpaaC1FuAcA8epl2s." class="footer__icon"><i class='bx bxl-whatsapp' ></i></a>
                 <a href="https://github.com/YehanHansakaOfficial" class="footer__icon"><i class='bx bxl-github' ></i></a>
                </div>
-               
-               
+
+
 Contact Me : yehanhansakaofficial@gmail.com <br>
 Location : Rathnapura, Sabaragamuwa Province, Sri Lanka<br>
 Built With : HTML, CSS, SCSS, JS<br><br></p>
@@ -950,7 +953,7 @@ Built With : HTML, CSS, SCSS, JS<br><br></p>
 </script>
         <!--===== MAIN JS =====-->
         <script>
-        	/*===== MENU SHOW =====*/ 
+                /*===== MENU SHOW =====*/ 
 const showMenu = (toggleId, navId) =>{
     const toggle = document.getElementById(toggleId),
     nav = document.getElementById(navId)
@@ -984,7 +987,7 @@ const scrollActive = () =>{
               sectionTop = current.offsetTop - 58,
               sectionId = current.getAttribute('id'),
               sectionsClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']')
-        
+
         if(scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight){
             sectionsClass.classList.add('active-link')
         }else{
